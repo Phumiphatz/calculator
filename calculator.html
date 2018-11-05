@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   
+    
+</head>
+    <body>
+        
+             <div class="w3-card" style="width:30%">
+             <img src="bear.jpg" alt="Person" style="width:100%">
+             <div class="w3-container">
+              <h1><b>Calculator</b></h1>
+              
+        <br>
+      
+           <p><input type = "text" id = "firstNumber" placeholder = "put firstNumber"></p>
+           <p><input type = "text" id = "secondNumber" placeholder= "put secondNumber"></p>
+        
+        <button class="w3-button w3-ripple w3-yellow" id = "sumButton"  onclick="getSum()">+</button>
+        <button class="w3-button w3-ripple w3-yellow" id = "subButton" onclick="getSub()">-</button>
+        <button class="w3-button w3-ripple w3-yellow" id = "mulButton" onclick="getMul()">*</button>
+        <button class="w3-button w3-ripple w3-yellow" id = "divButton" onclick="getDiv()">/</button>
+        <div id = "output"></div>
+
+        <p>--------------------------------------------------------------</p>
+            </div>
+         
+          <br>
+
+          
+        </div>
+        </div>
+        <script>
+            var firstNumber = document.getElementById("firstNumber");
+            var secondNumber = document.getElementById("secondNumber");
+            var output = document.getElementById("output");
+
+            function getSum(){
+                let sum = parseInt(firstNumber.value) + parseInt(secondNumber.value);
+                showResult(sum);
+            }
+
+             function getSub(){
+                let sub = parseInt(firstNumber.value) - parseInt(secondNumber.value);
+                showResult(sub);
+            }
+            function getMul(){
+                let mul = parseInt(firstNumber.value) * parseInt(secondNumber.value);
+                showResult(mul);
+            }
+            function getDiv(){
+                let div = parseInt(firstNumber.value) / parseInt(secondNumber.value);
+                showResult(div);
+            }
+            
+
+            function showResult(result){
+                output.innerHTML = "awswer : " + result;
+
+            }
+           
+           
+        </script>
+    </body>
+
+    </body>
+</html>
